@@ -3,6 +3,7 @@
 // @version      0.0.1
 // @namespace    https://github.com/Trrrrw/UserScript
 // @homepage     https://github.com/Trrrrw/UserScript
+// @icon         https://www.bilibili.com/favicon.ico?v=1
 // @author       Trrrrw
 // @description  美化search.bilibili.com页面
 // @match        https://search.bilibili.com/*
@@ -10,7 +11,7 @@
 // ==/UserScript==
 (function () {
     setTimeout(() => {//延迟400毫秒等待加载完成
-        //背景图片链接
+        //背景图片链接，可将此处链接修改
         var bgimg='https://i0.hdslb.com/bfs/new_dyn/4cc6ab9f2cd059255fe1e031f9fd0ad36823116.jpg';
 
         //主体；网页body；header-bar；footer
