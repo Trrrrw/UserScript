@@ -15,7 +15,7 @@
 |search.bilibili.com/all|✔️|✖️|
 
 ## Artwork Copyright
-[![壁纸喵](https://i0.hdslb.com/bfs/face/93bba0fb2fc3c1ad1ead9a5e4db031ef36f532d5.jpg@240w_240h_1c_1s.webp)](https://t.bilibili.com/754787244907167748)
+[![bilibili@壁纸喵](https://i0.hdslb.com/bfs/face/93bba0fb2fc3c1ad1ead9a5e4db031ef36f532d5.jpg)](https://t.bilibili.com/754787244907167748)
 
 ## License
 
