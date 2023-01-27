@@ -17,19 +17,10 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      - name: Setup Yarn
+      - name: action-yarn
         # You may pin to the exact commit or the version.
-        # uses: mskelton/setup-yarn@2fd0f48147cbee4fd8a71723a3b86851d86ba46b
-        uses: mskelton/setup-yarn@v1.4.0
-        with:
-          # Additional flags to pass to the install command.
-          #flags: # optional
-          # Node version to use, defaults to the current LTS version.
-          node-version: 18
-          # Git ref to checkout. Passed to `actions/checkout`.
-          #ref: # optional
-          # Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm
-          cache: yarn
+        # uses: comchangs/action-yarn@e4a1f4800849aa2e73dbc77d872a3c011cdc28d5
+        uses: comchangs/action-yarn@v0.1-beta
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
