@@ -4,7 +4,7 @@ import { defaultTheme } from 'vuepress'
 export default defineUserConfig({
     lang: 'zh-CN',
     title: 'Trrrre/UserScript',
-    base: '/',
+    base: '/docs/',
     head: [['link', { rel: 'icon', href: 'https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/Avatar.6a6hwam389o0.webp' }]],
     theme: defaultTheme({
         repo: 'Trrrrw/UserScript',
