@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @homepage     https://github.com/Trrrrw/UserScript
 // @version      0.0.1
-// @description  虎扑网页端优化
+// @description  优化虎扑网页端
 // @author       Trrrrw
 // @match        https://bbs.hupu.com/*
 // @icon         https://w1.hoopchina.com.cn/images/pc/old/favicon.ico
