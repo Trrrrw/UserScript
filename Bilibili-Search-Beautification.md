@@ -18,6 +18,13 @@
 |-|-|-|-|
 |![](https://www.bilibili.com/favicon.ico?v=1)|search.bilibili.com/all|✔️|✖️|
 
+## 更新
+### 0.0.2
+将搜索结果添加圆角，删除部分无用的结果。
+> 但是第二页或者翻页再翻回来就恢复了
+> <img src="https://i11.hoopchina.com.cn/hupuapp/bbs/443/98254443/thread_98254443_20230128191726_s_132911_o_w_512_h_512_56000.gif" referrerPolicy="no-referrer" style="width:6%;">
+> ，先这样吧，又不是不能用。
+
 ## Artwork Copyright
 <a href="https://t.bilibili.com/754787244907167748" target="_blank"><img src="https://i0.hdslb.com/bfs/face/93bba0fb2fc3c1ad1ead9a5e4db031ef36f532d5.jpg" referrerPolicy="no-referrer" alt="bilibili@壁纸喵"></a>
 
