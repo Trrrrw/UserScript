@@ -7,6 +7,8 @@
 // @author       Trrrrw
 // @match        https://search.bilibili.com/*
 // @icon         https://www.bilibili.com/favicon.ico?v=1
+// @downloadURL https://github.com/Trrrrw/UserScript/raw/main/Bilibili-Search-Beautification.user.js
+// @updateURL   https://github.com/Trrrrw/UserScript/raw/main/Bilibili-Search-Beautification.user.js
 // @license      GPL-3.0
 // ==/UserScript==
 (function () {
