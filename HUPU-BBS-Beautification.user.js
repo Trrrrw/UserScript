@@ -7,8 +7,8 @@
 // @author       Trrrrw
 // @match        https://bbs.hupu.com/*
 // @icon         https://w1.hoopchina.com.cn/images/pc/old/favicon.ico
-// @downloadURL https://github.com/Trrrrw/UserScript/blob/main/HUPU-BBS-Beautification.user.js
-// @updateURL   https://github.com/Trrrrw/UserScript/blob/main/HUPU-BBS-Beautification.user.js
+// @downloadURL  https://github.com/Trrrrw/UserScript/blob/main/HUPU-BBS-Beautification.user.js
+// @updateURL    https://github.com/Trrrrw/UserScript/blob/main/HUPU-BBS-Beautification.user.js
 // @license      GPL-3.0
 // ==/UserScript==
 
