@@ -24,7 +24,7 @@
                 dlApp = document.getElementsByClassName('download-app')[0],
                 rightPost = document.getElementsByClassName('right-post'),
                 QRCodeBtn = document.getElementsByClassName('link_2iELG qrcodeLink_3wVdw')[0];
-            dlApp.remove(); rightPost[2].remove(); QRCodeBtn.remove();
+            dlApp.remove(); rightPost[1].remove(); QRCodeBtn.remove();
             for (var i = 0; i < pImg.length; i++) {
                 pImg[i].style.width = '50%';
             }

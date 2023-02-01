@@ -19,6 +19,10 @@
 |-|-|-|-|
 |![](https://w1.hoopchina.com.cn/images/pc/old/favicon.ico)|https://bbs.hupu.com/*|✔️|✖️|
 
+## 更新
+### 0.0.2
+修复bug
+
 ## License
 
 The GPL-3.0 License.
