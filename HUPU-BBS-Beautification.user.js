@@ -2,7 +2,7 @@
 // @name         虎扑网页端优化
 // @namespace    http://tampermonkey.net/
 // @homepage     https://github.com/Trrrrw/UserScript
-// @version      0.0.1
+// @version      0.0.2
 // @description  优化虎扑网页端
 // @author       Trrrrw
 // @match        https://bbs.hupu.com/*
