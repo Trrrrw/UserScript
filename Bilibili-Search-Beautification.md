@@ -9,9 +9,10 @@
 > 确保您的浏览器安装有 **Tampermonkey  脚本管理器扩展（[Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh)** / **[Firefox](https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/)** / **[Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)）。**  
 
 ## 功能
-优化`https://search.bilibili.com/all`页面，最终效果：
-![bili-search-preview](https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/bili-search-preview.webp)
-背景图片是`bgimg`，修改其链接即可修改背景图片。
+ - 优化`https://search.bilibili.com/all`页面，最终效果：
+![bili-search-preview](https://user-images.githubusercontent.com/68099555/216365447-cb1c5099-36a9-4139-9897-3c346508361d.png)
+![bili-searchInput-preview](https://user-images.githubusercontent.com/68099555/216365705-e6519e28-65bf-44ab-9efe-a0c2e346327e.png)
+ - 背景图片是`bgimg`，修改其链接即可修改背景图片。
 
 ## 适配网站
 ||网站链接|PC|Phone|
@@ -25,8 +26,14 @@
 > <img src="https://i11.hoopchina.com.cn/hupuapp/bbs/443/98254443/thread_98254443_20230128191726_s_132911_o_w_512_h_512_56000.gif" referrerPolicy="no-referrer" style="width:6%;">
 > ，先这样吧，又不是不能用。
 
+### 0.0.3
+ - 顶栏添加模糊效果
+ - 点击搜索框后背景会变模糊
+ - 投稿按钮添加是否删除选项，代码开头的参数
+> [issues #1](https://github.com/Trrrrw/UserScript/issues/1)
+
 ## Artwork Copyright
-<a href="https://t.bilibili.com/754787244907167748" target="_blank"><img src="https://i0.hdslb.com/bfs/face/93bba0fb2fc3c1ad1ead9a5e4db031ef36f532d5.jpg" referrerPolicy="no-referrer" alt="bilibili@壁纸喵"></a>
+<a href="https://t.bilibili.com/755900500405125154" target="_blank"><img src="https://i0.hdslb.com/bfs/face/93bba0fb2fc3c1ad1ead9a5e4db031ef36f532d5.jpg" referrerPolicy="no-referrer" alt="bilibili@壁纸喵"></a>
 
 ## License
 
