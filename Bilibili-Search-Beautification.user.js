@@ -2,7 +2,7 @@
 // @name         B站搜索页美化
 // @namespace    http://tampermonkey.net/
 // @homepage     https://github.com/Trrrrw/UserScript
-// @version      0.0.3
+// @version      0.0.4
 // @description  美化search.bilibili.com页面
 // @author       Trrrrw
 // @match        https://search.bilibili.com/*
@@ -45,12 +45,13 @@
         //将主体设为透明
         bg.style.background = 'transparent';
         //将整个网页body添加背景
-        body.setAttribute('style', 'background: url( ' + bgimg + ');background-size: cover;');
+        //body.setAttribute('style', 'background: url( ' + bgimg + ');background-size: cover;');
+        body.style.background = 'url( ' + bgimg + ')'; body.style.backgroundSize = 'cover';
         //删除部分元素
         footer.remove(); sideBtn.remove(); centerTitleText.remove();
         //header设为半透明模糊
-        biliHeaderContainer.style.background = '#f8f6f65c'; biliHeaderContainer.style.backdropFilter = 'blur(10px)';
-        biliHeader.style.background = 'transparent'; biliHeaderBar.style.background = 'transparent';
+        biliHeaderContainer.style.background = '#f8f6f65c'; biliHeader.style.background = 'transparent';
+        biliHeaderBar.style.background = 'transparent'; biliHeaderBar.style.backdropFilter = 'blur(10px)';
         //将header中左侧部分元素删除
         for (var i = 1; i <= 7; i++) {
             headerItem[i].style.display = 'none';
@@ -58,7 +59,7 @@
         //删除左上bilibili图标右侧“首页”
         miniHeaderTitle.style.display = 'none';
         //删除最右侧投稿
-        if (upBtnSwitch==0) {
+        if (upBtnSwitch == 0) {
             rightEntryItem[1].remove();
         }
         //搜索栏选中模糊

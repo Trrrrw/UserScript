@@ -32,6 +32,9 @@
  - 投稿按钮添加是否删除选项，代码开头的参数
 > [issues #1](https://github.com/Trrrrw/UserScript/issues/1)
 
+### 0.0.4
+ - 修复了顶栏动态等无法使用的bug
+
 ## Artwork Copyright
 <a href="https://t.bilibili.com/755900500405125154" target="_blank"><img src="https://i0.hdslb.com/bfs/face/93bba0fb2fc3c1ad1ead9a5e4db031ef36f532d5.jpg" referrerPolicy="no-referrer" alt="bilibili@壁纸喵"></a>
 
