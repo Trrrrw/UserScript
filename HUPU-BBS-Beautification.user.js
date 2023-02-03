@@ -7,8 +7,8 @@
 // @author       Trrrrw
 // @match        https://bbs.hupu.com/*
 // @icon         https://w1.hoopchina.com.cn/images/pc/old/favicon.ico
-// @downloadURL  https://github.com/Trrrrw/UserScript/blob/main/HUPU-BBS-Beautification.user.js
-// @updateURL    https://github.com/Trrrrw/UserScript/blob/main/HUPU-BBS-Beautification.user.js
+// @downloadURL  https://greasyfork.org/scripts/459013-%E8%99%8E%E6%89%91%E7%BD%91%E9%A1%B5%E7%AB%AF%E4%BC%98%E5%8C%96/code/%E8%99%8E%E6%89%91%E7%BD%91%E9%A1%B5%E7%AB%AF%E4%BC%98%E5%8C%96.user.js
+// @updateURL    https://greasyfork.org/scripts/459013-%E8%99%8E%E6%89%91%E7%BD%91%E9%A1%B5%E7%AB%AF%E4%BC%98%E5%8C%96/code/%E8%99%8E%E6%89%91%E7%BD%91%E9%A1%B5%E7%AB%AF%E4%BC%98%E5%8C%96.user.js
 // @license      GPL-3.0
 // ==/UserScript==
 

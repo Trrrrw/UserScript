@@ -7,8 +7,8 @@
 // @author       Trrrrw
 // @match        https://search.bilibili.com/*
 // @icon         https://www.bilibili.com/favicon.ico?v=1
-// @downloadURL  https://github.com/Trrrrw/UserScript/raw/main/Bilibili-Search-Beautification.user.js
-// @updateURL    https://github.com/Trrrrw/UserScript/raw/main/Bilibili-Search-Beautification.user.js
+// @downloadURL  https://greasyfork.org/scripts/458903-b%E7%AB%99%E6%90%9C%E7%B4%A2%E9%A1%B5%E7%BE%8E%E5%8C%96/code/B%E7%AB%99%E6%90%9C%E7%B4%A2%E9%A1%B5%E7%BE%8E%E5%8C%96.user.js
+// @updateURL    https://greasyfork.org/scripts/458903-b%E7%AB%99%E6%90%9C%E7%B4%A2%E9%A1%B5%E7%BE%8E%E5%8C%96/code/B%E7%AB%99%E6%90%9C%E7%B4%A2%E9%A1%B5%E7%BE%8E%E5%8C%96.user.js
 // @license      GPL-3.0
 // ==/UserScript==
 (function () {
