@@ -9,15 +9,22 @@
 > 确保您的浏览器安装有 **Tampermonkey  脚本管理器扩展（[Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh)** / **[Firefox](https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/)** / **[Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)）。**  
 
 ## 功能
- - 优化`https://search.bilibili.com/all`页面，最终效果：
-![bili-search-preview](https://user-images.githubusercontent.com/68099555/216365447-cb1c5099-36a9-4139-9897-3c346508361d.png)
-![bili-searchInput-preview](https://user-images.githubusercontent.com/68099555/216365705-e6519e28-65bf-44ab-9efe-a0c2e346327e.png)
- - 背景图片是`bgimg`，修改其链接即可修改背景图片。
+- 美化页面
+- 左上角图标点击链接替换为`https://search.bilibili.com/all`，首页移至悬浮窗内
+- 背景图片是`bgimg`，修改其链接即可修改背景图片。
+- 效果图：
+![image](https://user-images.githubusercontent.com/68099555/216762489-98db1869-0420-4bc2-b172-93ac80f8507c.png)
+![image](https://user-images.githubusercontent.com/68099555/216762496-ad8fc5e0-c655-4a06-b976-fe16705ef6af.png)
+![image](https://user-images.githubusercontent.com/68099555/216762505-2b01d88b-a1cd-4910-9dbc-345347196a74.png)
 
 ## 适配网站
 ||网站链接|PC|Phone|
 |-|-|-|-|
 |![](https://www.bilibili.com/favicon.ico?v=1)|search.bilibili.com/all|✔️|✖️|
+
+## To Do
+- [ ] 背景模糊动画
+- [ ] 搜索结果页面
 
 ## 更新
 ### 0.0.2
@@ -27,13 +34,18 @@
 > ，先这样吧，又不是不能用。
 
 ### 0.0.3
- - 顶栏添加模糊效果
- - 点击搜索框后背景会变模糊
- - 投稿按钮添加是否删除选项，代码开头的参数
+- 顶栏添加模糊效果
+- 点击搜索框后背景会变模糊
+- 投稿按钮添加是否删除选项，代码开头的参数
 > [issues #1](https://github.com/Trrrrw/UserScript/issues/1)
 
 ### 0.0.4
- - 修复了顶栏动态等无法使用的bug
+- 修复了顶栏动态等无法使用的bug
+
+### 0.0.5
+- 搜索框模糊效果
+- 左上角图标点击链接替换为`https://search.bilibili.com/all`，首页移至悬浮窗内
+- 删除搜索历史和热搜
 
 ## Artwork Copyright
 <a href="https://t.bilibili.com/755900500405125154" target="_blank"><img src="https://i0.hdslb.com/bfs/face/93bba0fb2fc3c1ad1ead9a5e4db031ef36f532d5.jpg" referrerPolicy="no-referrer" alt="bilibili@壁纸喵"></a>
