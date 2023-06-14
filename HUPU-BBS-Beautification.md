@@ -1,4 +1,4 @@
-# 虎扑网页端优化
+# 虎扑网页端优化<sub>0.0.2</sub>
 [![GitHub license](https://img.shields.io/github/license/Trrrrw/UserScript?style=flat-square&color=4285dd&logo=github)](https://github.com/Trrrrw/UserScript)
 [![GitHub stars](https://img.shields.io/github/stars/Trrrrw/UserScript?style=flat-square&color=4285dd&logo=github)](https://github.com/Trrrrw/UserScript)
 [![GitHub forks](https://img.shields.io/github/forks/Trrrrw/UserScript?style=flat-square&color=4285dd&logo=github)](https://github.com/Trrrrw/UserScript)

@@ -1,4 +1,4 @@
-# B站搜索页美化
+# B站搜索页美化<sub>0.1.0</sub>
 [![GitHub license](https://img.shields.io/github/license/Trrrrw/UserScript?style=flat-square&color=4285dd&logo=github)](https://github.com/Trrrrw/UserScript)
 [![GitHub stars](https://img.shields.io/github/stars/Trrrrw/UserScript?style=flat-square&color=4285dd&logo=github)](https://github.com/Trrrrw/UserScript)
 [![GitHub forks](https://img.shields.io/github/forks/Trrrrw/UserScript?style=flat-square&color=4285dd&logo=github)](https://github.com/Trrrrw/UserScript)
@@ -24,14 +24,24 @@
 
 ## To Do
 - [ ] 背景模糊动画
-- [ ] 搜索结果页面
+- [x] 搜索结果页面
 
 ## 更新
-### 0.0.2
-将搜索结果添加圆角，删除部分无用的结果。
-> 但是第二页或者翻页再翻回来就恢复了
-> <img src="https://i11.hoopchina.com.cn/hupuapp/bbs/443/98254443/thread_98254443_20230128191726_s_132911_o_w_512_h_512_56000.gif" referrerPolicy="no-referrer" style="width:6%;">
-> ，先这样吧，又不是不能用。
+### 0.1.0
+- 重新写了一遍，功能和之前一样
+- 搜索结果页面把背景改回白色
+- <img src="https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/%E5%A4%A7%E4%BD%AC%E9%82%A6%E9%82%A6-%E4%BB%A3%E7%A0%81.webp" referrerPolicy="no-referrer" style="width:20%;">
+
+### 0.0.6
+- 删除右侧图标下文字
+
+### 0.0.5
+- 搜索框模糊效果
+- 左上角图标点击链接替换为`https://search.bilibili.com/all`，首页移至悬浮窗内
+- 删除搜索历史和热搜
+
+### 0.0.4
+- 修复了顶栏动态等无法使用的bug
 
 ### 0.0.3
 - 顶栏添加模糊效果
@@ -39,13 +49,16 @@
 - 投稿按钮添加是否删除选项，代码开头的参数
 > [issues #1](https://github.com/Trrrrw/UserScript/issues/1)
 
-### 0.0.4
-- 修复了顶栏动态等无法使用的bug
+### 0.0.2
+将搜索结果添加圆角，删除部分无用的结果。
+> 但是第二页或者翻页再翻回来就恢复了
+> <img src="https://i11.hoopchina.com.cn/hupuapp/bbs/443/98254443/thread_98254443_20230128191726_s_132911_o_w_512_h_512_56000.gif" referrerPolicy="no-referrer" style="width:6%;">
+> ，先这样吧，又不是不能用。
 
-### 0.0.5
-- 搜索框模糊效果
-- 左上角图标点击链接替换为`https://search.bilibili.com/all`，首页移至悬浮窗内
-- 删除搜索历史和热搜
+
+
+
+
 
 ## Artwork Copyright
 <a href="https://t.bilibili.com/755900500405125154" target="_blank"><img src="https://i0.hdslb.com/bfs/face/93bba0fb2fc3c1ad1ead9a5e4db031ef36f532d5.jpg" referrerPolicy="no-referrer" alt="bilibili@壁纸喵"></a>
