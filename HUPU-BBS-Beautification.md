@@ -1,4 +1,4 @@
-# 虎扑网页端优化<sub>0.0.2</sub>
+# 虎扑网页端优化<sub>0.1.0</sub>
 [![GitHub license](https://img.shields.io/github/license/Trrrrw/UserScript?style=flat-square&color=4285dd&logo=github)](https://github.com/Trrrrw/UserScript)
 [![GitHub stars](https://img.shields.io/github/stars/Trrrrw/UserScript?style=flat-square&color=4285dd&logo=github)](https://github.com/Trrrrw/UserScript)
 [![GitHub forks](https://img.shields.io/github/forks/Trrrrw/UserScript?style=flat-square&color=4285dd&logo=github)](https://github.com/Trrrrw/UserScript)
@@ -9,10 +9,8 @@
 > 确保您的浏览器安装有 **Tampermonkey  脚本管理器扩展（[Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh)** / **[Firefox](https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/)** / **[Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)）。**  
 
 ## 功能
- - 删除社区页面和帖子详情页部分元素
- - 将贴内图片大小调整为原来的50%
- - 调整右下角按钮位置
- - 恢复已读帖子标题颜色(可选是否开启)
+- 删除社区页面和帖子详情页部分元素
+- 调整右下角按钮位置
 
 ## 适配网站
 ||网站链接|PC|Phone|
@@ -20,6 +18,11 @@
 |![](https://w1.hoopchina.com.cn/images/pc/old/favicon.ico)|https://bbs.hupu.com/*|✔️|✖️|
 
 ## 更新
+### 0.1.0
+- 重新写了一遍，功能和之前大致一样
+- 帖子内右下角添加返回
+- 帖子样式调整
+
 ### 0.0.2
 修复bug
 
