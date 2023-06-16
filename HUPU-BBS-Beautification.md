@@ -15,7 +15,7 @@
 ## 适配网站
 ||网站链接|PC|Phone|
 |-|-|-|-|
-|![](https://w1.hoopchina.com.cn/images/pc/old/favicon.ico)|https://bbs.hupu.com/*|✔️|✖️|
+|![icon](https://w1.hoopchina.com.cn/images/pc/old/favicon.ico)|https://bbs.hupu.com/*|✔️|✖️|
 
 ## 更新
 ### 0.1.0

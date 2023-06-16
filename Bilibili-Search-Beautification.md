@@ -13,20 +13,26 @@
 - 左上角图标点击链接替换为`https://search.bilibili.com/all`，首页移至悬浮窗内
 - 背景图片是`bgimg`，修改其链接即可修改背景图片。
 - 效果图：
-![image](https://user-images.githubusercontent.com/68099555/216762489-98db1869-0420-4bc2-b172-93ac80f8507c.png)
-![image](https://user-images.githubusercontent.com/68099555/216762496-ad8fc5e0-c655-4a06-b976-fe16705ef6af.png)
-![image](https://user-images.githubusercontent.com/68099555/216762505-2b01d88b-a1cd-4910-9dbc-345347196a74.png)
+![homepage](./../img/homepage.webp)
+![searching](./../img/searching.webp)
+![searchresult](./../img/searchresult.webp)
 
 ## 适配网站
-||网站链接|PC|Phone|
-|-|-|-|-|
-|![](https://www.bilibili.com/favicon.ico?v=1)|search.bilibili.com/all|✔️|✖️|
+|                                               | 网站链接                | PC  | Phone |
+| --------------------------------------------- | ----------------------- | --- | ----- |
+| ![icon](https://www.bilibili.com/favicon.ico?v=1) | search.bilibili.com/all | ✔️   | ✖️     |
 
 ## To Do
-- [ ] 背景模糊动画
 - [x] 搜索结果页面
+- [x] 搜索结果页返回
+- [ ] 背景模糊动画
 
 ## 更新
+### 0.1.1
+- 更新左上下拉栏中首页的图标
+- 坏消息，现在改了顶栏样式，没有左上图标了，第一条没用了
+- 搜索结果页可以点击图标返回（不要刷新网页哦◑﹏◐）
+
 ### 0.1.0
 - 重新写了一遍，功能和之前一样
 - 搜索结果页面把背景改回白色
