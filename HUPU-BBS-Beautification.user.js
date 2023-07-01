@@ -2,7 +2,7 @@
 // @name         虎扑网页端优化
 // @namespace    http://tampermonkey.net/
 // @homepage     https://github.com/Trrrrw/UserScript
-// @version      0.1.0
+// @version      0.1.1
 // @description  优化虎扑网页端
 // @author       Trrrrw
 // @match        https://bbs.hupu.com/*
@@ -25,6 +25,7 @@ function set_title() {
 (function () {
     //删除元素
     GM_addStyle('.hu-pc-navigation-type{display:none !important;}')//话题广场
+    GM_addStyle('.hu-pc-navigation-topic-type-item{display:none !important;}')
     GM_addStyle('.backToTop_2mZa6{bottom:10px;right:8px;}')//右下按钮
     GM_addStyle('.index_backToTop__rx3__{bottom:10px;right:8px;}')//帖子内右下按钮
     GM_addStyle('.index_game-center-sidebar__xz6S_{display:none !important;}')//虎扑游戏悬浮窗
