@@ -1,1 +1,0 @@
-export const siteData = JSON.parse("{\"base\":\"/\",\"lang\":\"zh-CN\",\"title\":\"Trrrre/UserScript\",\"description\":\"\",\"head\":[[\"link\",{\"rel\":\"icon\",\"href\":\"https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/Avatar.6a6hwam389o0.webp\"}]],\"locales\":{}}")
