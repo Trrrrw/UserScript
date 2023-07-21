@@ -11,8 +11,6 @@
 // @grant        window.onload
 // @grant        window.history
 // @icon         https://w1.hoopchina.com.cn/images/pc/old/favicon.ico
-// @downloadURL  https://greasyfork.org/scripts/459013-%E8%99%8E%E6%89%91%E7%BD%91%E9%A1%B5%E7%AB%AF%E4%BC%98%E5%8C%96/code/%E8%99%8E%E6%89%91%E7%BD%91%E9%A1%B5%E7%AB%AF%E4%BC%98%E5%8C%96.user.js
-// @updateURL    https://greasyfork.org/scripts/459013-%E8%99%8E%E6%89%91%E7%BD%91%E9%A1%B5%E7%AB%AF%E4%BC%98%E5%8C%96/code/%E8%99%8E%E6%89%91%E7%BD%91%E9%A1%B5%E7%AB%AF%E4%BC%98%E5%8C%96.user.js
 // @license      GPL-3.0
 // ==/UserScript==
 
@@ -70,5 +68,24 @@ function set_title() {
         document.getElementsByClassName('index_box__x5WWh')[0].onclick = function () {
             window.history.back();
         }
+        //添加跳转到评论区
+        document.getElementsByClassName("post-reply_post-reply__D1M4P")[0].id="commentArea";
+        document.getElementsByClassName('index_text__XBhts')[2].innerText = '前往'; document.getElementsByClassName('index_text__XBhts')[3].innerText = '评论'
+        var commentButton=document.getElementsByClassName("index_link__U4H39")[1];
+        commentButton.removeAttribute("target");
+        commentButton.setAttribute("href","#commentArea");
+        commentButton.addEventListener('click', function(event) {
+            // 取消默认的点击行为
+            event.preventDefault();
+            // 获取目标元素
+            var targetElement = document.getElementById('commentArea');
+            // 计算目标位置
+            var targetPosition = targetElement.offsetTop;
+            // 滚动到目标位置
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth' // 平滑滚动
+            });
+        });
     }
 })();

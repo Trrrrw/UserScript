@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-74bc627b","path":"/about/","title":"关于","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"Artwork Copyright","slug":"artwork-copyright","link":"#artwork-copyright","children":[]},{"level":2,"title":"License","slug":"license","link":"#license","children":[]}],"git":{},"filePathRelative":"about/README.md"}');export{e as data};
