@@ -1,4 +1,4 @@
-# B站搜索页美化<sub>0.1.1</sub>
+# B站搜索页美化<sub>0.1.2</sub>
 [![GitHub license](https://img.shields.io/github/license/Trrrrw/UserScript?style=flat-square&color=4285dd&logo=github)](https://github.com/Trrrrw/UserScript)[![GitHub stars](https://img.shields.io/github/stars/Trrrrw/UserScript?style=flat-square&color=4285dd&logo=github)](https://github.com/Trrrrw/UserScript)[![GitHub forks](https://img.shields.io/github/forks/Trrrrw/UserScript?style=flat-square&color=4285dd&logo=github)](https://github.com/Trrrrw/UserScript)[![](https://img.shields.io/static/v1?label=%20&message=GreasyFork&style=flat-square&labelColor=7B0000&color=960000&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3ggEBCQHM3fXsAAAAVdJREFUOMudkz2qwkAUhc/goBaGJBgUtBCZyj0ILkpwAW7Bws4yO3AHLiCtEFD8KVREkoiFxZzX5A2KGfN4F04zMN+ce+5c4LMUgDmANYBnrnV+plBSi+FwyHq9TgA2LQpvCiEiABwMBtzv95RSfoNEHy8DYBzHrNVqVEr9BWKcqNFoxF6vx3a7zc1mYyC73a4MogBg7vs+z+czO50OW60Wt9stK5UKp9Mpj8cjq9WqDTBHnjAdxzGQZrPJw+HA31oulzbAWgLoA0CWZVBKIY5jzGYzdLtdE9DlcrFNrY98zobqOA6TJKHW2jg4nU5sNBpFDp6mhVe5rsvVasUwDHm9Xqm15u12o+/7Hy0gD8KatOd5vN/v1FozTVN6nkchxFuI6hsAAIMg4OPxMJCXdtTbR7JJCMEgCJhlGUlyPB4XfumozInrupxMJpRSRtZlKoNYl+m/6/wDuWAjtPfsQuwAAAAASUVORK5CYII=)](https://greasyfork.org/zh-CN/users/1016978-trrrrw)
 
 ## 安装
@@ -10,9 +10,9 @@
 - 左上角图标点击链接替换为`https://search.bilibili.com/all`，首页移至悬浮窗内
 - 背景图片是`bgimg`，修改其链接即可修改背景图片。
 - 效果图：
-![homepage](/assets/image/bili-homepage.webp)
-![searching](/assets/image/bili-searching.webp)
-![searchresult](/assets/image/bili-searchresult.webp)
+![homepage](https://cdn.staticaly.com/gh/Trrrrw/UserScript/main/docs/src/.vuepress/public/assets/image/bili-homepage.webp)
+![searching](https://cdn.staticaly.com/gh/Trrrrw/UserScript/main/docs/src/.vuepress/public/assets/image/bili-searching.webp)
+![searchresult](https://cdn.staticaly.com/gh/Trrrrw/UserScript/main/docs/src/.vuepress/public/assets/image/bili-searchresult.webp)
 
 ## 适配网站
 |                                               | 网站链接                | PC  | Phone |
@@ -20,11 +20,16 @@
 | ![icon](https://www.bilibili.com/favicon.ico?v=1) | search.bilibili.com/all | ✔️   | ✖️     |
 
 ## To Do
+- [ ] 使用本地图片
+- [ ] 背景模糊动画
 - [x] 搜索结果页面
 - [x] 搜索结果页返回
-- [ ] 背景模糊动画
 
 ## 更新
+### 0.1.2
+- 新增设置界面，可点击浏览器菜单栏中油猴插件图标查看
+- 缩减代码
+
 ### 0.1.1
 - 更新左上下拉栏中首页的图标
 - 坏消息，现在改了顶栏样式，没有左上图标了，第一条没用了
