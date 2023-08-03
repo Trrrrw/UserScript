@@ -2,12 +2,11 @@
 // @name         B站搜索页美化
 // @namespace    http://tampermonkey.net/
 // @homepage     https://github.com/Trrrrw/UserScript
-// @version      0.1.2
+// @version      0.1.3
 // @description  美化search.bilibili.com页面
 // @author       Trrrrw
 // @match        https://search.bilibili.com/*
 // @require      https://cdn.staticfile.org/sweetalert2/11.7.20/sweetalert2.min.js
-// @resource     swalStyle https://cdn.staticfile.org/sweetalert2/11.7.20/sweetalert2.min.css
 // @grant        GM_addStyle
 // @grant        GM_addElement
 // @grant        GM_registerMenuCommand
@@ -25,27 +24,38 @@
 (function () {
     'use strict';
 
+    GM_addElement('link',{
+        rel:'stylesheet',
+        href:'https://cdn.staticfile.org/sweetalert2/11.7.20/sweetalert2.min.css'
+    })
+
+    //设置初始化
     let value = [{
-        name: 'bgimg',
+        name: 'imgUrl',
         value: 'https://i0.hdslb.com/bfs/new_dyn/2e762660113a84fe20affb3ec16eba386823116.jpg'
+    },{
+        name: 'imgFile',
+        value: ''
     }, {
         name: 'upBtnSwitch',
+        value: true
+    }, {
+        name: 'isUrl',
         value: true
     }];
     value.forEach((v) => {
         GM_getValue(v.name) === undefined && GM_setValue(v.name, v.value);
     });
+
     GM_registerMenuCommand("⚙️设置",() => {
         Swal.fire({
-            title: '⚙️设置',
-            html: `<label class="swal2-checkbox" style="display: flex;"><input type="checkbox" id="up-button-checkbox" ${GM_getValue('upBtnSwitch') ? 'checked' : ''}><span class="swal2-label">是否显示投稿按钮</span></label>
-                   <input id="bgimg-url-input" class="swal2-input" placeholder="Enter the URL" value="${GM_getValue('bgimg')}" type="url" style="display: flex;">`,
-            showCloseButton: true,
-            confirmButtonText: '保存',
-            customClass: {
-                popup: 'instant-popup',
-            },
-        }).then((res) => {
+            title:'⚙️设置',
+            html:`<input id="up-button-checkbox" type="checkbox" ${GM_getValue('upBtnSwitch') ? 'checked' : ''}>是否显示投稿按钮</input><input id="is-url-checkbox" type="checkbox" ${GM_getValue('isUrl') ? 'checked' : ''}>是否使用网络图片</input>`+
+            `<label class="swal2-input-label">🖼️输入图片链接</label>`+
+            `<input id="bgimg-url" class="swal2-input" type="url" placeholder="输入图片链接" value="${GM_getValue('imgUrl')}">`+
+            `<label class="swal2-input-label">🖼️选择本地文件</label>`+
+            `<input id="bgimg-file" class="swal2-file" type="file" accept="image/*" aria-label="Upload your profile picture">`
+        }).then((res)=>{
             if (res.isConfirmed) {
                 history.go(0)
             }
@@ -53,10 +63,25 @@
         document.getElementById('up-button-checkbox').addEventListener('change', (e) => {
             GM_setValue('upBtnSwitch', e.currentTarget.checked);
         })
-        document.getElementById('bgimg-url-input').addEventListener('change', (e) => {
-            GM_setValue('bgimg', e.currentTarget.value);
+        document.getElementById('is-url-checkbox').addEventListener('change', (e) => {
+            GM_setValue('isUrl', e.currentTarget.checked);
         })
-    })
+        document.getElementById('bgimg-url').addEventListener('change', (e) => {
+            if(e.currentTarget.value){
+                GM_setValue('imgUrl', e.currentTarget.value);
+            }
+        })
+        document.getElementById('bgimg-file').addEventListener('change', (e) => {
+            if(e.isTrusted){
+                const selectedFile = event.target.files[0];
+                const reader = new FileReader();
+                reader.onload = (f) => {
+                    GM_setValue('imgFile',f.target.result)
+                };
+                reader.readAsDataURL(selectedFile);
+            }
+        })
+    });
 
     //删除元素
     let del_dom=[
@@ -79,11 +104,13 @@
     });
 
     //更改样式
-    // //左上bilibili图标样式
-    // GM_addStyle(''.left-entry__title{margin-right: 0px !important}'')
     //添加背景
+    if(GM_getValue('isUrl')){
+        GM_addStyle(`body{background: url( ${GM_getValue('imgUrl')} );}`)
+    }else{
+        GM_addStyle(`body{background: url( ${GM_getValue('imgFile')} );}`)
+    }
     GM_addStyle('#i_cecream{background: transparent;}')
-    GM_addStyle(`body{background: url( ${GM_getValue('bgimg')} );}`)
     GM_addStyle('body{background-size: cover;}')
     //header模糊效果
     GM_addStyle('#bili-header-container{background: transparent !important}')

@@ -1,4 +1,4 @@
-# B站搜索页美化<sub>0.1.2</sub>
+# B站搜索页美化<sub>0.1.3</sub>
 [![GitHub license](https://img.shields.io/github/license/Trrrrw/UserScript?style=flat-square&color=4285dd&logo=github)](https://github.com/Trrrrw/UserScript)[![GitHub stars](https://img.shields.io/github/stars/Trrrrw/UserScript?style=flat-square&color=4285dd&logo=github)](https://github.com/Trrrrw/UserScript)[![GitHub forks](https://img.shields.io/github/forks/Trrrrw/UserScript?style=flat-square&color=4285dd&logo=github)](https://github.com/Trrrrw/UserScript)[![](https://img.shields.io/static/v1?label=%20&message=GreasyFork&style=flat-square&labelColor=7B0000&color=960000&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3ggEBCQHM3fXsAAAAVdJREFUOMudkz2qwkAUhc/goBaGJBgUtBCZyj0ILkpwAW7Bws4yO3AHLiCtEFD8KVREkoiFxZzX5A2KGfN4F04zMN+ce+5c4LMUgDmANYBnrnV+plBSi+FwyHq9TgA2LQpvCiEiABwMBtzv95RSfoNEHy8DYBzHrNVqVEr9BWKcqNFoxF6vx3a7zc1mYyC73a4MogBg7vs+z+czO50OW60Wt9stK5UKp9Mpj8cjq9WqDTBHnjAdxzGQZrPJw+HA31oulzbAWgLoA0CWZVBKIY5jzGYzdLtdE9DlcrFNrY98zobqOA6TJKHW2jg4nU5sNBpFDp6mhVe5rsvVasUwDHm9Xqm15u12o+/7Hy0gD8KatOd5vN/v1FozTVN6nkchxFuI6hsAAIMg4OPxMJCXdtTbR7JJCMEgCJhlGUlyPB4XfumozInrupxMJpRSRtZlKoNYl+m/6/wDuWAjtPfsQuwAAAAASUVORK5CYII=)](https://greasyfork.org/zh-CN/users/1016978-trrrrw)
 
 ## 安装
@@ -20,12 +20,17 @@
 | ![icon](https://www.bilibili.com/favicon.ico?v=1) | search.bilibili.com/all | ✔️   | ✖️     |
 
 ## To Do
-- [ ] 使用本地图片
+- [x] 使用本地图片
 - [ ] 背景模糊动画
 - [x] 搜索结果页面
 - [x] 搜索结果页返回
 
-## 更新
+<details> <summary><h2>更新</h2></summary>
+
+### 0.1.3
+- 修复了设置界面显示问题
+- 可以使用本地图片辣
+
 ### 0.1.2
 - 更新后会覆盖掉之前设置的图片链接，记得备份
 - 如果设置弹窗显示错误请重新安装最新版
@@ -65,7 +70,7 @@
 > <img src="https://i11.hoopchina.com.cn/hupuapp/bbs/443/98254443/thread_98254443_20230128191726_s_132911_o_w_512_h_512_56000.gif" referrerPolicy="no-referrer" style="width:6%;">
 > ，先这样吧，又不是不能用。
 
-
+</details>
 
 
 
