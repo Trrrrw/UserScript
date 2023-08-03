@@ -6,8 +6,8 @@
 // @description  美化search.bilibili.com页面
 // @author       Trrrrw
 // @match        https://search.bilibili.com/*
-// @require      https://unpkg.com/sweetalert2@latest/dist/sweetalert2.min.js
-// @resource     swalStyle https://unpkg.com/sweetalert2@latest/dist/sweetalert2.min.css
+// @require      https://cdn.staticfile.org/sweetalert2/11.7.20/sweetalert2.min.js
+// @resource     swalStyle https://cdn.staticfile.org/sweetalert2/11.7.20/sweetalert2.min.css
 // @grant        GM_addStyle
 // @grant        GM_addElement
 // @grant        GM_registerMenuCommand
