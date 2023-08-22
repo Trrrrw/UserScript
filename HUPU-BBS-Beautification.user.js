@@ -2,7 +2,7 @@
 // @name         虎扑网页端优化
 // @namespace    http://tampermonkey.net/
 // @homepage     https://github.com/Trrrrw/UserScript
-// @version      0.1.1
+// @version      0.1.2
 // @description  优化虎扑网页端
 // @author       Trrrrw
 // @match        https://bbs.hupu.com/*
@@ -11,30 +11,46 @@
 // @grant        window.onload
 // @grant        window.history
 // @icon         https://w1.hoopchina.com.cn/images/pc/old/favicon.ico
+// @downloadURL  https://cdn.staticaly.com/gh/Trrrrw/UserScript@main/HUPU-BBS-Beautification.user.js
+// @updateURL    https://cdn.staticaly.com/gh/Trrrrw/UserScript@main/HUPU-BBS-Beautification.user.js
 // @license      GPL-3.0
 // ==/UserScript==
 
+//帖子在当前页面打开
 function set_title() {
     for (var k = 0; k < document.getElementsByClassName('p-title').length; k++) {
         document.getElementsByClassName('p-title')[k].target = '_self';
     }
 }
 
+/**
+ * 这个函数用于删除传入的元素
+ * @param {string} selector - 要删除的元素
+ */
+function del_dom(selector) {
+    GM_addStyle(`${selector}{display:none !important;}`)
+}
+
 (function () {
     //删除元素
-    GM_addStyle('.hu-pc-navigation-type{display:none !important;}')//话题广场
-    GM_addStyle('.hu-pc-navigation-topic-type-item{display:none !important;}')
-    GM_addStyle('.backToTop_2mZa6{bottom:10px;right:8px;}')//右下按钮
-    GM_addStyle('.index_backToTop__rx3__{bottom:10px;right:8px;}')//帖子内右下按钮
-    GM_addStyle('.index_game-center-sidebar__xz6S_{display:none !important;}')//虎扑游戏悬浮窗
-    GM_addStyle('.index_game-center-entrance-container-title__BNope{display:none !important;}'); GM_addStyle('#game-center-entrance-container{display:none !important;}')//虎扑游戏中心
-    GM_addStyle('.index_right-post__Yuzlv:nth-of-type(2){display:none !important;}')//热门游戏
-    GM_addStyle('.index_download-app__ui5ia{display:none !important;}')//下载虎扑侧栏
-    GM_addStyle('.index_qrcodeBox__zLFSV{display:none !important;}')//下载虎扑二维码
-    GM_addStyle('.index_right-post__Yuzlv{display:none !important;}')//崩坏3最热帖
+    var domToDel = [
+        '.hu-pc-navigation-type',//话题广场
+        '.hu-pc-navigation-topic-type-item',
+        '.index_game-center-sidebar__xz6S_',//虎扑游戏悬浮窗
+        '.index_game-center-entrance-container-title__BNope','#game-center-entrance-container',//虎扑游戏中心
+        '.index_right-post__Yuzlv:nth-of-type(2)',//热门游戏
+        '.index_download-app__ui5ia',//下载虎扑侧栏
+        '.index_qrcodeBox__zLFSV',//下载虎扑二维码
+        '.index_right-post__Yuzlv'//崩坏3最热帖
+    ];
+    domToDel.forEach(selector => {
+        del_dom(selector)
+    });
 
     //调整元素
     GM_addStyle('.index_bbs-post-web-body-left-wrapper__O14II{flex: auto;width: auto;}')//调整帖子样式
+    GM_addStyle('.backToTop_2mZa6{bottom:10px;right:8px;}')//右下按钮
+    GM_addStyle('.index_backToTop__rx3__{bottom:10px;right:8px;}')//帖子内右下按钮
     //删除顶部红条
     GM_addStyle('.hp-pc-rc-TopMenu{height: 24px !important;}')
     GM_addStyle('.hp-pc-rc-TopMenu-banner{display:none !important;}')
@@ -54,7 +70,31 @@ function set_title() {
     }
 
     window.onload = function () {
+        //深色模式版头图片
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // 系统处于深色模式
+            try{
+                console.log('系统处于深色模式')
+                var topPic = document.getElementsByClassName('bbs-sl-web-intro')[0]
+                const topPicStyle = topPic.style.cssText
+                const darkTopPicStyle = topPicStyle.replace(/rgb\(255, 255, 255\)/g, 'rgba(0, 0, 0, 0.95)').replace(/rgba\(255, 255, 255, 0.9\)/g, 'rgba(0, 0, 0, 0.9)');
+                topPic.style.cssText = darkTopPicStyle
+                GM_addStyle('#container > div > div.bbs-sl-web-holder > div > div.bbs-sl-web-topic-wrap > div.bbs-sl-web-intro > div.bbs-sl-web-intro-avatar > img{background: linear-gradient(90deg, rgba(0, 0, 0, 0.95) 20%, rgba(0, 0, 0, 0.9));}')
+            }
+            catch{
+                console.log('...')
+            }
+        } else {
+            // 系统处于浅色模式
+            try{
+                console.log('系统处于深色模式')
+            }
+            catch{
+                console.log('...')
+            }
+        };
         //添加返回按钮
+        var backLink = document.querySelector("#__next > div > div.index_bbs-post-web-container___cRHg > div.index_bbs-post-web-body__XQ5Sq > div.index_bbs-post-web-body-left-wrapper__O14II > div > div > div:nth-child(1) > section > span:nth-child(3) > a").href
         GM_addStyle('.iconxiazaihupu{display:none !important}')
         GM_addElement('link', {
             rel: 'stylesheet',
@@ -66,8 +106,10 @@ function set_title() {
         })
         document.getElementsByClassName('index_text__XBhts')[0].innerText = '返回'; document.getElementsByClassName('index_text__XBhts')[1].innerText = '上级'
         document.getElementsByClassName('index_box__x5WWh')[0].onclick = function () {
-            window.history.back();
-        }
+            // window.history.back();
+            window.open(backLink,'_self')
+        };
+
         //添加跳转到评论区
         document.getElementsByClassName("post-reply_post-reply__D1M4P")[0].id="commentArea";
         document.getElementsByClassName('index_text__XBhts')[2].innerText = '前往'; document.getElementsByClassName('index_text__XBhts')[3].innerText = '评论'
