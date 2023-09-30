@@ -2,7 +2,7 @@
 // @name         B站搜索页美化
 // @namespace    http://tampermonkey.net/
 // @homepage     https://github.com/Trrrrw/UserScript
-// @version      0.1.3
+// @version      0.1.4
 // @description  美化search.bilibili.com页面
 // @author       Trrrrw
 // @match        https://search.bilibili.com/*
@@ -111,7 +111,7 @@
         GM_addStyle(`body{background: url( ${GM_getValue('imgFile')} );}`)
     }
     GM_addStyle('#i_cecream{background: transparent;}')
-    GM_addStyle('body{background-size: cover;}')
+    GM_addStyle('body{background-attachment: fixed;background-size: cover;}')
     //header模糊效果
     GM_addStyle('#bili-header-container{background: transparent !important}')
     GM_addStyle('.bili-header{background: transparent !important;}')
@@ -154,6 +154,12 @@
                 }
             }
         };
+        //修复收藏按钮
+        GM_addStyle('a.right-entry__outside.header-favorite-container__down{display: none !important}')
+        let headerFavorite = document.querySelector("a.right-entry__outside.header-favorite-container__up").outerHTML
+        headerFavorite = headerFavorite.replace("header-favorite-container__up","")
+        const favWrap = document.querySelector("#bili-header-container > div > div > ul.right-entry > li:nth-child(5)")
+        favWrap.innerHTML = headerFavorite
     }
 })();
 

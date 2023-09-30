@@ -50,7 +50,7 @@ function del_dom(selector) {
     //调整元素
     GM_addStyle('.index_bbs-post-web-body-left-wrapper__O14II{flex: auto;width: auto;}')//调整帖子样式
     GM_addStyle('.backToTop_2mZa6{bottom:10px;right:8px;}')//右下按钮
-    GM_addStyle('.index_backToTop__rx3__{bottom:10px;right:8px;}')//帖子内右下按钮
+    GM_addStyle('.index_backToTop__rx3__{bottom:10px !important;right:8px !important;}')//帖子内右下按钮
     //删除顶部红条
     GM_addStyle('.hp-pc-rc-TopMenu{height: 24px !important;}')
     GM_addStyle('.hp-pc-rc-TopMenu-banner{display:none !important;}')
