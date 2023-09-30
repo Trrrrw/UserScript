@@ -11,9 +11,9 @@
 - 调整右下角按钮位置
 
 ## 适配网站
-||网站链接|PC|Phone|
-|-|-|-|-|
-|![icon](https://w1.hoopchina.com.cn/images/pc/old/favicon.ico)|https://bbs.hupu.com/*|✔️|✖️|
+|                                                              |       网站链接        |PC|Pad|Phone|
+|--------------------------------------------------------------|----------------------|--|---|-----|
+|![icon](https://w1.hoopchina.com.cn/images/pc/old/favicon.ico)|https://bbs.hupu.com/*|✔️|✔️| ✖️ |
 
 <details> <summary><h2>更新</h2></summary>
 

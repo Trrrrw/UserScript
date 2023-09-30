@@ -15,9 +15,9 @@
 ![searchresult](https://cdn.staticaly.com/gh/Trrrrw/UserScript/main/docs/src/.vuepress/public/assets/image/bili-searchresult.webp)
 
 ## 适配网站
-|                                               | 网站链接                | PC  | Phone |
-| --------------------------------------------- | ----------------------- | --- | ----- |
-| ![icon](https://www.bilibili.com/favicon.ico?v=1) | search.bilibili.com/all | ✔️   | ✖️     |
+|                                                   | 网站链接                 |PC|Pad|Phone|
+|---------------------------------------------------|-------------------------|--|---|-----|
+| ![icon](https://www.bilibili.com/favicon.ico?v=1) | search.bilibili.com/all |✔️|✔️| ✖️ |
 
 ## To Do
 - [x] 使用本地图片
