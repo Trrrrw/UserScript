@@ -3,16 +3,16 @@
 
 ## 安装
 👉👉[点击此处安装](https://greasyfork.org/zh-CN/scripts/458903-b%E7%AB%99%E6%90%9C%E7%B4%A2%E9%A1%B5%E7%BE%8E%E5%8C%96)👈👈  
-> 确保您的浏览器安装有 **Tampermonkey  脚本管理器扩展（[Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh)** / **[Firefox](https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/)** / **[Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)）。**  
+> 确保您的浏览器安装有 **Tampermonkey  脚本管理器扩展（[Chrome](https://chromewebstore.google.com/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/dhdgffkkebhmkfjojejmpbldmpobfkfo)** / **[Firefox](https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/)** / **[Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)）。**  
 
 ## 功能
 - 美化页面
 - 左上角图标点击链接替换为`https://search.bilibili.com/all`，首页移至悬浮窗内
 - 背景图片是`bgimg`，修改其链接即可修改背景图片。
 - 效果图：
-![homepage](https://cdn.staticaly.com/gh/Trrrrw/UserScript/main/docs/src/.vuepress/public/assets/image/bili-homepage.webp)
-![searching](https://cdn.staticaly.com/gh/Trrrrw/UserScript/main/docs/src/.vuepress/public/assets/image/bili-searching.webp)
-![searchresult](https://cdn.staticaly.com/gh/Trrrrw/UserScript/main/docs/src/.vuepress/public/assets/image/bili-searchresult.webp)
+![homepage](https://cdn.jsdelivr.net/gh/Trrrrw/UserScript@main/docs/src/.vuepress/public/assets/image/bili-homepage.webp)
+![searching](https://cdn.jsdelivr.net/gh/Trrrrw/UserScript@main/docs/src/.vuepress/public/assets/image/bili-searching.webp)
+![searchresult](https://cdn.jsdelivr.net/gh/Trrrrw/UserScript@main/docs/src/.vuepress/public/assets/image/bili-searchresult.webp)
 
 ## 适配网站
 |                                                   | 网站链接                 |PC|Pad|Phone|
@@ -20,12 +20,18 @@
 | ![icon](https://www.bilibili.com/favicon.ico?v=1) | search.bilibili.com/all |✔️|✔️| ✖️ |
 
 ## To Do
-- [x] 使用本地图片
-- [ ] 背景模糊动画
-- [x] 搜索结果页面
-- [x] 搜索结果页返回
+- [ ] 搜索结果滚动时卡顿
+- [ ] 搜索结果退回搜索主页后页面状态没完全恢复
+- [ ] 搜索结果滚动条状态
 
-<details> <summary><h2>更新</h2></summary>
+## 0.1.5
+- 去除了右侧滚动条
+- 修复搜索结果页面刷新后背景显示为图片的问题
+- 将搜索结果顶栏中的logo链接从主页改为搜索页
+- 优化设置页面逻辑
+- 新增可以将视频设置为背景（暂时只支持视频直连）
+
+<details> <summary><h2>更新历史</h2></summary>
 
 ### 0.1.4
 - 修复收藏按钮

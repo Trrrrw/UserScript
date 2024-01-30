@@ -3,7 +3,7 @@
 
 ## 安装
 👉👉[点击此处安装](https://greasyfork.org/zh-CN/scripts/459013-%E8%99%8E%E6%89%91%E7%BD%91%E9%A1%B5%E7%AB%AF%E4%BC%98%E5%8C%96)👈👈  
-> 确保您的浏览器安装有 **Tampermonkey  脚本管理器扩展（[Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh)** / **[Firefox](https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/)** / **[Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)）。**  
+> 确保您的浏览器安装有 **Tampermonkey  脚本管理器扩展（[Chrome](https://chromewebstore.google.com/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/dhdgffkkebhmkfjojejmpbldmpobfkfo)** / **[Firefox](https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/)** / **[Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)）。**  
 
 ## 功能
 - 优化使用体验
@@ -15,7 +15,7 @@
 |--------------------------------------------------------------|----------------------|--|---|-----|
 |![icon](https://w1.hoopchina.com.cn/images/pc/old/favicon.ico)|https://bbs.hupu.com/*|✔️|✔️| ✖️ |
 
-<details> <summary><h2>更新</h2></summary>
+<details> <summary><h2>更新历史</h2></summary>
 
 
 ### 0.1.2
