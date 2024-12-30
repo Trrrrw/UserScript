@@ -2,7 +2,7 @@
 // @name         虎扑网页端优化
 // @namespace    http://tampermonkey.net/
 // @homepage     https://github.com/Trrrrw/UserScript
-// @version      0.1.2
+// @version      0.1.3
 // @description  优化虎扑网页端
 // @author       Trrrrw
 // @match        https://bbs.hupu.com/*
@@ -49,8 +49,13 @@ function del_dom(selector) {
 
     //调整元素
     GM_addStyle('.index_bbs-post-web-body-left-wrapper__O14II{flex: auto;width: auto;}')//调整帖子样式
-    GM_addStyle('.backToTop_2mZa6{bottom:10px;right:8px;}')//右下按钮
-    GM_addStyle('.index_backToTop__rx3__{bottom:10px !important;right:8px !important;}')//帖子内右下按钮
+    // GM_addStyle('.backToTop_2mZa6{bottom:10px;right:8px;}')//右下按钮
+    // GM_addStyle('.index_backToTop__rx3__{bottom:10px !important;right:8px !important;}')//帖子内右下按钮
+    GM_addStyle('.index_bbs-post-web-body-right-wrapper__WvQ4Q{flex:0;}')//主贴右侧
+    // 修改图片大小
+    //GM_addStyle('p.image-wrapper > span > div > img{height:233px !important;}')
+    //// GM_addStyle('.thread-content-detail > p{display:inline-block;width: fit-content;}')
+
     //删除顶部红条
     GM_addStyle('.hp-pc-rc-TopMenu{height: 24px !important;}')
     GM_addStyle('.hp-pc-rc-TopMenu-banner{display:none !important;}')
@@ -111,16 +116,26 @@ function del_dom(selector) {
         };
 
         //添加跳转到评论区
-        document.getElementsByClassName("post-reply_post-reply__D1M4P")[0].id="commentArea";
         document.getElementsByClassName('index_text__XBhts')[2].innerText = '前往'; document.getElementsByClassName('index_text__XBhts')[3].innerText = '评论'
         var commentButton=document.getElementsByClassName("index_link__U4H39")[1];
         commentButton.removeAttribute("target");
-        commentButton.setAttribute("href","#commentArea");
+        // commentButton.setAttribute("href","#commentArea");
+        var commentAreaId = 'commentArea'
+        try{
+            document.getElementsByClassName("wrapper-container index_margin-top-10__gRpdR")[0].id="commentArea";
+        }catch(error){
+            console.log(error)
+            commentAreaId = 'hupu-compact-editor'
+            // var commentAreaElement = document.createElement("div")
+            // commentAreaElement.id = "commentArea"
+            // commentAreaElement.style.display = "none"
+            // document.getElementsByClassName('index_bbs-post-web-main__D_K6v')[0].appendChild(commentAreaElement);
+        }
         commentButton.addEventListener('click', function(event) {
             // 取消默认的点击行为
             event.preventDefault();
             // 获取目标元素
-            var targetElement = document.getElementById('commentArea');
+            var targetElement = document.getElementById(commentAreaId);
             // 计算目标位置
             var targetPosition = targetElement.offsetTop;
             // 滚动到目标位置
