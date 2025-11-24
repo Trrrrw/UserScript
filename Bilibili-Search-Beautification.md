@@ -15,10 +15,15 @@
 ![searchresult](https://cdn.jsdelivr.net/gh/Trrrrw/UserScript@main/docs/src/.vuepress/public/assets/image/bili-searchresult.webp)
 
 ## 适配网站
-|                                                   | 网站链接                 |PC|Pad|Phone|
-|---------------------------------------------------|-------------------------|--|---|-----|
-| ![icon](https://www.bilibili.com/favicon.ico?v=1) | search.bilibili.com/all |✔️|✔️| ✖️ |
+|                                                   | 网站链接                | PC  | Pad | Phone |
+| ------------------------------------------------- | ----------------------- | --- | --- | ----- |
+| ![icon](https://www.bilibili.com/favicon.ico?v=1) | search.bilibili.com/all | ✔️   | ✔️   | ✖️     |
 
+
+## 0.1.6
+- 修复SweetAlert2依赖问题
+
+<details> <summary><h2>更新历史</h2></summary>
 
 ## 0.1.5
 - 去除了右侧滚动条
@@ -26,8 +31,6 @@
 - 将搜索结果顶栏中的logo链接从主页改为搜索页
 - 优化设置页面逻辑
 - 新增可以将视频设置为背景（暂时只支持视频直链）
-
-<details> <summary><h2>更新历史</h2></summary>
 
 ### 0.1.4
 - 修复收藏按钮

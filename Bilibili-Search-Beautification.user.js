@@ -6,7 +6,7 @@
 // @description  美化search.bilibili.com页面
 // @author       Trrrrw
 // @match        https://search.bilibili.com/*
-// @require      https://cdn.staticfile.org/sweetalert2/11.7.20/sweetalert2.min.js
+// @require      https://cdn.jsdelivr.net/npm/sweetalert2@11.26.3/dist/sweetalert2.all.min.js
 // @grant        GM_addStyle
 // @grant        GM_addElement
 // @grant        GM_registerMenuCommand
@@ -24,22 +24,22 @@
 (function () {
     'use strict';
 
-    GM_addElement('link',{
-        rel:'stylesheet',
-        href:'https://cdn.staticfile.org/sweetalert2/11.7.20/sweetalert2.min.css'
+    GM_addElement('link', {
+        rel: 'stylesheet',
+        href: 'https://cdn.jsdelivr.net/npm/sweetalert2@11.26.3/dist/sweetalert2.min.css'
     })
 
     //设置初始化
     let value = [{
         name: 'imgUrl',
         value: 'https://i0.hdslb.com/bfs/new_dyn/2e762660113a84fe20affb3ec16eba386823116.jpg'
-    },{
+    }, {
         name: 'imgFile',
         value: ''
-    },{
+    }, {
         name: 'videoUrl',
         value: ''
-    },{
+    }, {
         name: 'videoFile',
         value: ''
     }, {
@@ -55,30 +55,30 @@
 
 
 
-    GM_registerMenuCommand("⚙️设置",() => {
+    GM_registerMenuCommand("⚙️设置", () => {
         Swal.fire({
-            title:'⚙️设置',
-            html:`<label for="bgType">设置背景类型：</label>`+
-            `<select id="bgType" name="bgTypeSettings">
-                 <option value="1" ${GM_getValue('bgType')=='1' ? 'selected' : ''}>网络图片</option>
-                 <option value="2" ${GM_getValue('bgType')=='2' ? 'selected' : ''}>本地图片</option>
-                 <option value="3" ${GM_getValue('bgType')=='3' ? 'selected' : ''}>网络视频</option>
-                 <!--<option value="4" ${GM_getValue('bgType')=='4' ? 'selected' : ''}>本地视频</option>-->
+            title: '⚙️设置',
+            html: `<label for="bgType">设置背景类型：</label>` +
+                `<select id="bgType" name="bgTypeSettings">
+                 <option value="1" ${GM_getValue('bgType') == '1' ? 'selected' : ''}>网络图片</option>
+                 <option value="2" ${GM_getValue('bgType') == '2' ? 'selected' : ''}>本地图片</option>
+                 <option value="3" ${GM_getValue('bgType') == '3' ? 'selected' : ''}>网络视频</option>
+                 <!--<option value="4" ${GM_getValue('bgType') == '4' ? 'selected' : ''}>本地视频</option>-->
              </select><br/>`+
-            `<input id="up-button-checkbox" type="checkbox" ${GM_getValue('upBtnSwitch') ? 'checked' : ''}>是否显示投稿按钮</input><br/>`+
-            `<div id = "setting1" style="display:${GM_getValue('bgType')!='1' ? 'none' : ''}">
+                `<input id="up-button-checkbox" type="checkbox" ${GM_getValue('upBtnSwitch') ? 'checked' : ''}>是否显示投稿按钮</input><br/>` +
+                `<div id = "setting1" style="display:${GM_getValue('bgType') != '1' ? 'none' : ''}">
                 <label class="swal2-input-label">🖼️输入图片链接</label><input id="bgimg-url" class="swal2-input" type="url" placeholder="输入图片链接" value="${GM_getValue('imgUrl')}">
             </div>`+
-            `<div id = "setting2" style="display:${GM_getValue('bgType')!='2' ? 'none' : ''}">
+                `<div id = "setting2" style="display:${GM_getValue('bgType') != '2' ? 'none' : ''}">
                 <label class="swal2-input-label">🖼️选择图片文件</label><input id="bgimg-file" class="swal2-file" type="file" accept="image/*" aria-label="Upload your profile picture">
             </div>`+
-            `<div id = "setting3" style="display:${GM_getValue('bgType')!='3' ? 'none' : ''}">
+                `<div id = "setting3" style="display:${GM_getValue('bgType') != '3' ? 'none' : ''}">
                 <label class="swal2-input-label">🎬输入视频链接</label><input id="bgvideo-url" class="swal2-input" type="url" placeholder="输入视频链接" value="${GM_getValue('videoUrl')}">
             </div>`+
-            `<div id = "setting4" style="display:${GM_getValue('bgType')!='4' ? 'none' : ''}">
+                `<div id = "setting4" style="display:${GM_getValue('bgType') != '4' ? 'none' : ''}">
                 <label class="swal2-input-label">🎬选择视频文件</label><input id="bgvideo-file" class="swal2-file" type="file" accept="video/*" aria-label="Upload your profile picture">
             </div>`
-        }).then((res)=>{
+        }).then((res) => {
             if (res.isConfirmed) {
                 history.go(0)
             }
@@ -87,41 +87,41 @@
             GM_setValue('upBtnSwitch', e.currentTarget.checked);
         })
         document.getElementById('bgimg-url').addEventListener('change', (e) => {
-            if(e.currentTarget.value){
+            if (e.currentTarget.value) {
                 GM_setValue('imgUrl', e.currentTarget.value);
             }
         })
         document.getElementById('bgimg-file').addEventListener('change', (e) => {
-            if(e.isTrusted){
+            if (e.isTrusted) {
                 const selectedFile = event.target.files[0];
                 const reader = new FileReader();
                 reader.onload = (f) => {
-                    GM_setValue('imgFile',f.target.result)
+                    GM_setValue('imgFile', f.target.result)
                 };
                 reader.readAsDataURL(selectedFile);
             }
         })
         document.getElementById('bgvideo-url').addEventListener('change', (e) => {
-            if(e.currentTarget.value){
+            if (e.currentTarget.value) {
                 GM_setValue('videoUrl', e.currentTarget.value);
             }
         })
         document.getElementById('bgvideo-file').addEventListener('change', (e) => {
-            if(e.isTrusted){
+            if (e.isTrusted) {
                 const selectedFile = e.target.files[0];
                 var url = URL.createObjectURL(selectedFile);
-                GM_setValue('videoFile',url);
+                GM_setValue('videoFile', url);
             }
         })
         document.getElementById('bgType').addEventListener('change', (e) => {
             GM_addStyle(`#setting${e.target.value}{display: unset !important}`);
             GM_addStyle(`#setting${GM_getValue('bgType')}{display: none !important}`);
-            GM_setValue('bgType',e.target.value);
+            GM_setValue('bgType', e.target.value);
         })
     });
 
     //删除元素
-    let del_dom=[
+    let del_dom = [
         '#biliMainFooter',//footer
         '.side-buttons',//右下客服按钮
         '.right-entry-text',//右上按钮文字
@@ -143,50 +143,50 @@
 
     //更改样式
     //添加背景
-    switch(GM_getValue('bgType')){
+    switch (GM_getValue('bgType')) {
         case '1':
             GM_addStyle(`body{background: url( ${GM_getValue('imgUrl')} );}`)
             break;
         case '2':
             GM_addStyle(`body{background: url( ${GM_getValue('imgFile')} );}`)
             break;
-        case '3':{
+        case '3': {
             const sourceTag = document.createElement("source");
             sourceTag.src = GM_getValue('videoUrl');
-            sourceTag.type="video/mp4";
+            sourceTag.type = "video/mp4";
             const videoTag = document.createElement("video");
-            videoTag.id="bg-video";
-            videoTag.muted=true;
-            videoTag.autoplay=true;
-            videoTag.loop=true;
-            videoTag.style.cssText=`position: absolute;object-fit: cover;height: 100%;width: 100%;top: 0;left: 0;`;
+            videoTag.id = "bg-video";
+            videoTag.muted = true;
+            videoTag.autoplay = true;
+            videoTag.loop = true;
+            videoTag.style.cssText = `position: absolute;object-fit: cover;height: 100%;width: 100%;top: 0;left: 0;`;
             videoTag.appendChild(sourceTag);
             document.body.appendChild(videoTag);
             break;
         }
-        case '4':{
+        case '4': {
             const sourceTag = document.createElement("source");
             sourceTag.src = GM_getValue('videoFile');
-            sourceTag.type="video/mp4";
+            sourceTag.type = "video/mp4";
             const videoTag = document.createElement("video");
-            videoTag.id="bg-video";
-            videoTag.muted=true;
-            videoTag.autoplay=true;
-            videoTag.loop=true;
-            videoTag.style.cssText=`position: absolute;object-fit: cover;height: 100%;width: 100%;top: 0;left: 0;`;
+            videoTag.id = "bg-video";
+            videoTag.muted = true;
+            videoTag.autoplay = true;
+            videoTag.loop = true;
+            videoTag.style.cssText = `position: absolute;object-fit: cover;height: 100%;width: 100%;top: 0;left: 0;`;
             videoTag.appendChild(sourceTag);
             document.body.appendChild(videoTag);
             break;
         }
         default:
-            GM_setValue('bgType','1');
+            GM_setValue('bgType', '1');
     }
     // if(GM_getValue('isUrl')){
     //     GM_addStyle(`body{background: url( ${GM_getValue('imgUrl')} );}`)
     // }else{
     //     GM_addStyle(`body{background: url( ${GM_getValue('imgFile')} );}`)
     // }
-    GM_addStyle('#i_cecream{background: transparent;}')
+    GM_addStyle('#i_cecream{background: transparent;min-height:initial;}')
     GM_addStyle('body{background-attachment: fixed;background-size: cover;}')
     //header模糊效果
     GM_addStyle('#bili-header-container{background: transparent !important}')
@@ -207,7 +207,7 @@
     //右上图标颜色
     GM_addStyle('.right-entry-icon{color: #00aeec !important;}')
 
-    function searchResult(){
+    function searchResult() {
         const newUrl = event.state ? event.state.url : window.location.href;
         if (newUrl.includes('keyword')) {
             GM_addStyle('.left-entry{display:block !important}')
@@ -237,17 +237,17 @@
             if (e.button == 0) {
                 if (e.srcElement.className == 'search-input-el' && document.body.style.backdropFilter == '') {
                     document.body.style.backdropFilter = 'blur(10px)';
-                    if(GM_getValue('bgType')=='3'||GM_getValue('bgType')=='4'){GM_addStyle('#bg-video{filter: blur(5px);}')}
+                    if (GM_getValue('bgType') == '3' || GM_getValue('bgType') == '4') { GM_addStyle('#bg-video{filter: blur(5px);}') }
                 } else if (e.srcElement.className != 'search-input-el' && document.body.style.backdropFilter == 'blur(10px)') {
                     document.body.style.backdropFilter = '';
-                    if(GM_getValue('bgType')=='3'||GM_getValue('bgType')=='4'){GM_addStyle('#bg-video{filter: unset;}')}
+                    if (GM_getValue('bgType') == '3' || GM_getValue('bgType') == '4') { GM_addStyle('#bg-video{filter: unset;}') }
                 }
             }
         };
         //修复收藏按钮
         GM_addStyle('a.right-entry__outside.header-favorite-container__down{display: none !important}')
         let headerFavorite = document.querySelector("a.right-entry__outside.header-favorite-container__up").outerHTML
-        headerFavorite = headerFavorite.replace("header-favorite-container__up","")
+        headerFavorite = headerFavorite.replace("header-favorite-container__up", "")
         const favWrap = document.querySelector("#bili-header-container > div > div > ul.right-entry > li:nth-child(5)")
         favWrap.innerHTML = headerFavorite
     }

@@ -37,7 +37,7 @@ function del_dom(selector) {
         '.hu-pc-navigation-type',//话题广场
         '.hu-pc-navigation-topic-type-item',
         '.index_game-center-sidebar__xz6S_',//虎扑游戏悬浮窗
-        '.index_game-center-entrance-container-title__BNope','#game-center-entrance-container',//虎扑游戏中心
+        '.index_game-center-entrance-container-title__BNope', '#game-center-entrance-container',//虎扑游戏中心
         '.index_right-post__Yuzlv:nth-of-type(2)',//热门游戏
         '.index_download-app__ui5ia',//下载虎扑侧栏
         '.index_qrcodeBox__zLFSV',//下载虎扑二维码
@@ -78,23 +78,24 @@ function del_dom(selector) {
         //深色模式版头图片
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             // 系统处于深色模式
-            try{
+            try {
                 console.log('系统处于深色模式')
                 var topPic = document.getElementsByClassName('bbs-sl-web-intro')[0]
                 const topPicStyle = topPic.style.cssText
                 const darkTopPicStyle = topPicStyle.replace(/rgb\(255, 255, 255\)/g, 'rgba(0, 0, 0, 0.95)').replace(/rgba\(255, 255, 255, 0.9\)/g, 'rgba(0, 0, 0, 0.9)');
                 topPic.style.cssText = darkTopPicStyle
                 GM_addStyle('#container > div > div.bbs-sl-web-holder > div > div.bbs-sl-web-topic-wrap > div.bbs-sl-web-intro > div.bbs-sl-web-intro-avatar > img{background: linear-gradient(90deg, rgba(0, 0, 0, 0.95) 20%, rgba(0, 0, 0, 0.9));}')
+                GM_addStyle('.hp-pc-rc-TopMenu-top-container{background-color: #181a1b;box-shadow: 0px 0.1px 0px black;}'); GM_addStyle('.hp-pc-rc-TopMenu-top{background-color: #181a1b;}')
             }
-            catch{
+            catch {
                 console.log('...')
             }
         } else {
             // 系统处于浅色模式
-            try{
+            try {
                 console.log('系统处于深色模式')
             }
-            catch{
+            catch {
                 console.log('...')
             }
         };
@@ -112,18 +113,18 @@ function del_dom(selector) {
         document.getElementsByClassName('index_text__XBhts')[0].innerText = '返回'; document.getElementsByClassName('index_text__XBhts')[1].innerText = '上级'
         document.getElementsByClassName('index_box__x5WWh')[0].onclick = function () {
             // window.history.back();
-            window.open(backLink,'_self')
+            window.open(backLink, '_self')
         };
 
         //添加跳转到评论区
         document.getElementsByClassName('index_text__XBhts')[2].innerText = '前往'; document.getElementsByClassName('index_text__XBhts')[3].innerText = '评论'
-        var commentButton=document.getElementsByClassName("index_link__U4H39")[1];
+        var commentButton = document.getElementsByClassName("index_link__U4H39")[1];
         commentButton.removeAttribute("target");
         // commentButton.setAttribute("href","#commentArea");
         var commentAreaId = 'commentArea'
-        try{
-            document.getElementsByClassName("wrapper-container index_margin-top-10__gRpdR")[0].id="commentArea";
-        }catch(error){
+        try {
+            document.getElementsByClassName("wrapper-container index_margin-top-10__gRpdR")[0].id = "commentArea";
+        } catch (error) {
             console.log(error)
             commentAreaId = 'hupu-compact-editor'
             // var commentAreaElement = document.createElement("div")
@@ -131,7 +132,7 @@ function del_dom(selector) {
             // commentAreaElement.style.display = "none"
             // document.getElementsByClassName('index_bbs-post-web-main__D_K6v')[0].appendChild(commentAreaElement);
         }
-        commentButton.addEventListener('click', function(event) {
+        commentButton.addEventListener('click', function (event) {
             // 取消默认的点击行为
             event.preventDefault();
             // 获取目标元素
